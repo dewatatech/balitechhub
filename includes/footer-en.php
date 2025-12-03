@@ -7,7 +7,7 @@
                     <span class="ml-3 text-xl font-semibold">Bali Tech Hub</span>
                 </div>
                 <p class="text-gray-400 leading-relaxed">
-                    The largest technology community in Bali. Bringing together tech enthusiasts to collaborate and grow together.
+                    The fastest growing technology community in Bali. Bringing together tech enthusiasts to collaborate and grow together.
                 </p>
             </div>
             

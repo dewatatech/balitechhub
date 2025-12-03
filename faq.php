@@ -54,7 +54,7 @@
           "name": "What is Bali Tech Hub?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Bali Tech Hub is the largest technology community in Bali, bringing together developers, designers, entrepreneurs, and tech enthusiasts to collaborate, learn, and grow together."
+            "text": "Bali Tech Hub is the fastest growing technology community in Bali, bringing together developers, designers, entrepreneurs, and tech enthusiasts to collaborate, learn, and grow together."
           }
         },
         {
@@ -206,7 +206,7 @@
                     </div>
                     <div class="faq-content bg-white p-6 rounded-b-xl">
                         <p class="text-gray-600 leading-relaxed">
-                            Bali Tech Hub is the largest technology community in Bali, bringing together developers, designers, entrepreneurs, and tech enthusiasts to collaborate, learn, and grow together. We provide networking opportunities and knowledge sharing for the tech community in Bali.
+                            Bali Tech Hub is the fastest growing technology community in Bali, bringing together developers, designers, entrepreneurs, and tech enthusiasts to collaborate, learn, and grow together. We provide networking opportunities and knowledge sharing for the tech community in Bali.
                         </p>
                     </div>
                 </div>

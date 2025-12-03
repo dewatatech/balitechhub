@@ -49,7 +49,7 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Bali Tech Hub",
-      "description": "The largest technology community in Bali for developers, designers, and tech enthusiasts",
+      "description": "The fastest growing technology community in Bali for developers, designers, and tech enthusiasts",
       "url": "https://balitechhub.com/partners.php",
       "logo": {
         "@type": "ImageObject",

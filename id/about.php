@@ -50,7 +50,7 @@
       "@type": "Organization",
       "name": "Bali Tech Hub",
       "alternateName": "Komunitas Teknologi Bali",
-      "description": "Komunitas teknologi terbesar di Bali untuk developer, desainer, dan penggemar teknologi",
+      "description": "komunitas teknologi yang berkembang pesat di Bali untuk developer, desainer, dan penggemar teknologi",
       "url": "https://balitechhub.com/id/about-id.php",
       "logo": {
         "@type": "ImageObject",

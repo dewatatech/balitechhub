@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Halaman Tidak Ditemukan | Bali Tech Hub</title>
-    <meta name="description" content="Halaman yang Anda cari tidak ada. Kembali ke halaman utama Bali Tech Hub - Komunitas teknologi terbesar di Bali.">
+    <meta name="description" content="Halaman yang Anda cari tidak ada. Kembali ke halaman utama Bali Tech Hub - komunitas teknologi yang berkembang pesat">
     <meta name="robots" content="noindex, nofollow">
     <meta name="language" content="Indonesian">
     <meta name="geo.region" content="ID-BA">

@@ -16,7 +16,7 @@ $t = $BTH_T[$lang];
                     <span class="ml-3 text-xl font-bold">Bali Tech Hub</span>
                 </div>
                 <p class="text-gray-300 text-sm leading-relaxed max-w-sm">
-                    The largest technology community in Bali, connecting developers, designers, and tech enthusiasts.
+                    The fastest growing technology community in Bali, connecting developers, designers, and tech enthusiasts.
                 </p>
                 <!-- Social Icons -->
                 <div class="flex space-x-4">

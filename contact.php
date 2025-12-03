@@ -11,13 +11,13 @@ $t = $BTH_T[$lang];
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - Bali Tech Hub | Connect with Bali's Tech Community</title>
-    <meta name="description" content="Get in touch with Bali Tech Hub. Find our contact information, social media links, and connect with Bali's largest technology community.">
+    <meta name="description" content="Get in touch with Bali Tech Hub. Find our contact information, social media links, and connect with Bali's fastest growing technology community.">
     <meta name="keywords" content="Bali Tech Hub contact, tech community Bali, technology events Bali, startup community Bali">
     <meta name="author" content="Bali Tech Hub">
 
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Contact Us - Bali Tech Hub">
-    <meta property="og:description" content="Connect with Bali's largest technology community. Find our contact information and social media links.">
+    <meta property="og:description" content="Connect with Bali's fastest growing technology community. Find our contact information and social media links.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://balitechhub.com/contact.php">
     <meta property="og:image" content="https://balitechhub.com/assets/images/Bali Tech Hub Logo.jpg">
@@ -26,7 +26,7 @@ $t = $BTH_T[$lang];
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Contact Us - Bali Tech Hub">
-    <meta name="twitter:description" content="Connect with Bali's largest technology community. Find our contact information and social media links.">
+    <meta name="twitter:description" content="Connect with Bali's fastest growing technology community. Find our contact information and social media links.">
     <meta name="twitter:image" content="https://balitechhub.com/assets/images/Bali Tech Hub Logo.jpg">
 
     <!-- Canonical URL -->
@@ -162,7 +162,7 @@ $t = $BTH_T[$lang];
                 </h1>
                 <div class="max-w-3xl mx-auto fade-in" style="animation-delay: 0.2s;">
                     <p class="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">
-                        Connect with Bali's largest technology community
+                        Connect with Bali's fastest growing technology community
                     </p>
                     <div class="mt-4 flex items-center justify-center space-x-2">
                         <div class="h-px w-16 bg-gray-600"></div>

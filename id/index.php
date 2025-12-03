@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="Bali Tech Hub - Komunitas teknologi dan IT terbesar di Bali. Menghubungkan para pecinta teknologi untuk berkolaborasi dan belajar bersama.">
+        content="Bali Tech Hub - Komunitas teknologi dan IT yang berkembang pesat di Bali. Menghubungkan para pecinta teknologi untuk berkolaborasi dan belajar bersama.">
     <meta name="keywords"
         content="bali tech hub, komunitas teknologi bali, komunitas IT bali, teknologi bali, tech hub bali, komunitas programmer bali, developer bali, startup bali, teknologi indonesia, komunitas developer bali, programmer indonesia, IT community bali">
     <meta name="author" content="Bali Tech Hub">
@@ -33,9 +33,9 @@
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Komunitas Teknologi Terbesar di Bali | Bali Tech Hub">
+    <meta property="og:title" content="Komunitas Teknologi yang Berkembang Pesat di Bali | Bali Tech Hub">
     <meta property="og:description"
-        content="Bergabunglah dengan komunitas teknologi terbesar di Bali. Jaringan, pembelajaran, dan kolaborasi untuk para pecinta teknologi.">
+        content="Bergabunglah dengan komunitas teknologi yang berkembang pesat di Bali. Jaringan, pembelajaran, dan kolaborasi untuk para pecinta teknologi.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://balitechhub.com/id/">
     <meta property="og:image" content="https://balitechhub.com/assets/images/Bali%20Tech%20Hub%20Logo.jpg">
@@ -48,15 +48,15 @@
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Komunitas Teknologi Terbesar di Bali | Bali Tech Hub">
+    <meta name="twitter:title" content="Komunitas Teknologi yang Berkembang Pesat di Bali | Bali Tech Hub">
     <meta name="twitter:description"
-        content="Bergabunglah dengan komunitas teknologi terbesar di Bali. Jaringan, pembelajaran, dan kolaborasi untuk para pecinta teknologi.">
+        content="Bergabunglah dengan komunitas teknologi yang berkembang pesat di Bali. Jaringan, pembelajaran, dan kolaborasi untuk para pecinta teknologi.">
     <meta name="twitter:image" content="https://balitechhub.com/assets/images/Bali%20Tech%20Hub%20Logo.jpg">
     <meta name="twitter:image:alt" content="Logo Bali Tech Hub - Komunitas Teknologi Bali">
     <meta name="twitter:site" content="@balitechhub">
     <meta name="twitter:creator" content="@balitechhub">
 
-    <title>Komunitas Teknologi Terbesar di Bali | Bali Tech Hub</title>
+    <title>Komunitas Teknologi yang Berkembang Pesat di Bali | Bali Tech Hub</title>
 
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://cdn.tailwindcss.com">
@@ -196,7 +196,7 @@
       "@type": "Organization",
       "name": "Bali Tech Hub",
       "alternateName": "Komunitas Teknologi Bali",
-      "description": "Komunitas teknologi terbesar di Bali yang menghubungkan para pecinta teknologi untuk berkolaborasi dan belajar bersama",
+      "description": "Komunitas teknologi yang berkembang pesat di Bali yang menghubungkan para pecinta teknologi untuk berkolaborasi dan belajar bersama",
       "url": "https://balitechhub.com/id/",
       "logo": {
         "@type": "ImageObject",
@@ -266,7 +266,7 @@
       "name": "Bali Tech Hub",
       "alternateName": "Komunitas Teknologi Bali",
       "url": "https://balitechhub.com/id/",
-      "description": "Komunitas teknologi dan IT terbesar di Bali",
+      "description": "Komunitas teknologi dan IT yang berkembang pesat di Bali",
       "publisher": {
         "@type": "Organization",
         "name": "Bali Tech Hub"

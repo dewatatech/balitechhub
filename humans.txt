@@ -1,0 +1,17 @@
+/* TEAM */
+Organization: Bali Tech Hub
+Site: https://balitechhub.com
+Location: Bali, Indonesia
+Contact: contact@balitechhub.com
+
+/* THANKS */
+Community Members, Partners, and Contributors
+
+/* SITE */
+Last update: 2025/11/01
+Language: English / Indonesian
+Doctype: HTML5
+IDE: Visual Studio Code
+Standards: HTML5, CSS3, Semantic Web
+Components: Tailwind CSS, PHP
+Software: XAMPP, Apache

@@ -1,0 +1,336 @@
+/* Custom Tailwind Configuration */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --custom-black: #000000;
+    --custom-white: #ffffff;
+    --custom-gray: #f8f9fa;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Hero Section */
+.hero-gradient {
+    background: linear-gradient(135deg, #000000 0%, #333333 100%);
+}
+
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.8s ease-out;
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.7s ease-out;
+}
+
+.fade-in-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Hover Effects */
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Group Hover Effects */
+.group:hover .group-hover\:bg-white {
+    background-color: white !important;
+}
+
+.group:hover .group-hover\:text-custom-black {
+    color: #000000 !important;
+}
+
+.group:hover .group-hover\:text-white {
+    color: white !important;
+}
+
+.group:hover .group-hover\:text-gray-200 {
+    color: #e5e7eb !important;
+}
+
+.group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem) !important;
+}
+
+/* More specific group hover effects for platform cards */
+a.group:hover .group-hover\:bg-white {
+    background-color: white !important;
+}
+
+a.group:hover .group-hover\:text-custom-black {
+    color: #000000 !important;
+}
+
+a.group:hover .group-hover\:text-white {
+    color: white !important;
+}
+
+a.group:hover .group-hover\:text-gray-200 {
+    color: #e5e7eb !important;
+}
+
+a.group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem) !important;
+}
+
+/* Force hover effects with higher specificity */
+.group.bg-gradient-to-br:hover .group-hover\:bg-white {
+    background-color: white !important;
+}
+
+.group.bg-gradient-to-br:hover .group-hover\:text-custom-black {
+    color: #000000 !important;
+}
+
+.group.bg-gradient-to-br:hover .group-hover\:text-white {
+    color: white !important;
+}
+
+.group.bg-gradient-to-br:hover .group-hover\:text-gray-200 {
+    color: #e5e7eb !important;
+}
+
+.group.bg-gradient-to-br:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem) !important;
+}
+
+/* Ultra-specific hover effects for platform cards */
+a.group.bg-gradient-to-br.from-white.to-gray-50:hover .group-hover\:bg-white {
+    background-color: white !important;
+}
+
+a.group.bg-gradient-to-br.from-white.to-gray-50:hover .group-hover\:text-custom-black {
+    color: #000000 !important;
+}
+
+a.group.bg-gradient-to-br.from-white.to-gray-50:hover .group-hover\:text-white {
+    color: white !important;
+}
+
+a.group.bg-gradient-to-br.from-white.to-gray-50:hover .group-hover\:text-gray-200 {
+    color: #e5e7eb !important;
+}
+
+a.group.bg-gradient-to-br.from-white.to-gray-50:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem) !important;
+}
+
+/* Additional specificity for Indonesian page */
+body .group:hover .group-hover\:bg-white {
+    background-color: white !important;
+}
+
+body .group:hover .group-hover\:text-custom-black {
+    color: #000000 !important;
+}
+
+body .group:hover .group-hover\:text-white {
+    color: white !important;
+}
+
+body .group:hover .group-hover\:text-gray-200 {
+    color: #e5e7eb !important;
+}
+
+body .group:hover .group-hover\:translate-x-1 {
+    transform: translateX(0.25rem) !important;
+}
+
+/* Smooth Scrolling */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+/* Keyframe Animations */
+.pulse-animation {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { 
+        opacity: 1; 
+    }
+    50% { 
+        opacity: 0.7; 
+    }
+}
+
+.float-animation {
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { 
+        transform: translateY(0px); 
+    }
+    50% { 
+        transform: translateY(-10px); 
+    }
+}
+
+/* Loading Animation */
+body:not(.loaded) .fade-in,
+body:not(.loaded) .fade-in-left,
+body:not(.loaded) .fade-in-right,
+body:not(.loaded) .fade-in-scale {
+    opacity: 0;
+}
+
+body.loaded .fade-in,
+body.loaded .fade-in-left,
+body.loaded .fade-in-right,
+body.loaded .fade-in-scale {
+    opacity: 1;
+}
+
+/* Navigation */
+nav {
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* Custom Colors */
+.bg-custom-black {
+    background-color: var(--custom-black);
+}
+
+.text-custom-black {
+    color: var(--custom-black);
+}
+
+.bg-custom-white {
+    background-color: var(--custom-white);
+}
+
+.text-custom-white {
+    color: var(--custom-white);
+}
+
+.bg-custom-gray {
+    background-color: var(--custom-gray);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-gradient {
+        min-height: 100vh;
+    }
+    
+    .fade-in-left,
+    .fade-in-right {
+        transform: translateY(30px);
+    }
+    
+    .fade-in-left.visible,
+    .fade-in-right.visible {
+        transform: translateY(0);
+    }
+}
+
+/* Background Pattern */
+.bg-pattern {
+    background-image: radial-gradient(circle, rgba(255,255,255,0.1) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
+/* Additional Mobile Optimizations */
+@media (max-width: 640px) {
+    .float-animation {
+        animation-duration: 2s;
+    }
+    
+    .pulse-animation {
+        animation-duration: 1.5s;
+    }
+}
+
+/* Button Click Fixes */
+a, button {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative;
+    z-index: 20 !important;
+}
+
+/* Ensure hero buttons are clickable */
+.hero-gradient a {
+    pointer-events: auto !important;
+    cursor: pointer !important;
+    position: relative;
+    z-index: 30 !important;
+}
+
+/* Remove spacing between last section and footer */
+section:last-child {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+/* Ensure footer sticks directly to the last section */
+footer {
+    margin-top: 0 !important;
+}
+
+/* Remove default margin from sections that come before footer */
+section#contact {
+    padding-bottom: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/* Additional fix for any remaining gaps */
+body > section:last-of-type {
+    margin-bottom: -1px !important;
+}
+
+/* Ensure no unwanted whitespace between sections and footer */
+section + footer {
+    margin-top: 0 !important;
+}

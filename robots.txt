@@ -1,0 +1,46 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://balitechhub.com/sitemap.xml
+
+# Block access to specific directories
+Disallow: /includes/
+
+# Allow important CSS and JS for rendering
+Allow: /styles.css
+Allow: /script.js
+Allow: /manifest.json
+
+# Block other assets from indexing but allow crawling for rendering
+Disallow: /*.css$
+Disallow: /*.js$
+Disallow: /*.json$
+
+# Block image indexing in assets folder
+User-agent: Googlebot-Image
+Disallow: /assets/images/
+
+# Block specific file types
+Disallow: /*.ico$
+Disallow: /*.png$
+Disallow: /*.jpg$
+Disallow: /*.jpeg$
+Disallow: /*.gif$
+Disallow: /*.svg$
+Disallow: /*.webp$
+Disallow: /*.woff$
+Disallow: /*.woff2$
+Disallow: /*.ttf$
+Disallow: /*.eot$
+
+# Crawl-delay (optional, be careful with this)
+# Crawl-delay: 1
+
+# Allow important pages explicitly
+Allow: /$
+Allow: /index.php$
+Allow: /about.php$
+Allow: /id/$
+Allow: /id/index-id.php$
+Allow: /id/about-id.php$

@@ -1,0 +1,8 @@
+# Folder tooling & config lokal
+.claude/
+.github/
+.vscode/
+project-sop/
+
+# File config server lokal, jangan di-push
+.htaccess

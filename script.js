@@ -9,9 +9,32 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Language Switcher: Preserve Scroll Position
+    document.querySelectorAll('.lang-switcher').forEach(link => {
+        link.addEventListener('click', function() {
+            sessionStorage.setItem('restoreScroll', window.scrollY);
+        });
+    });
+
+    // Restore Scroll Position if set
+    const scrollPos = sessionStorage.getItem('restoreScroll');
+    if (scrollPos !== null) {
+        // Use setTimeout to ensure page rendering is complete before scrolling
+        setTimeout(() => {
+            window.scrollTo({
+                top: parseInt(scrollPos),
+                behavior: 'auto' // Instant jump, not smooth
+            });
+            sessionStorage.removeItem('restoreScroll');
+        }, 50); // Slight delay
+    }
+
     // Smooth scrolling for navigation links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
+            // Check if link is just a placeholder
+            if (this.getAttribute('href') === '#') return;
+            
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
             if (target) {
@@ -42,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }, observerOptions);
 
     // Observe all elements with fade-in classes
-    document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale').forEach(el => {
+    document.querySelectorAll('.fade-in, .fade-in-left, .fade-in-right, .fade-in-scale, .fade-in-up').forEach(el => {
         observer.observe(el);
     });
 
@@ -86,6 +109,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Add click animation to buttons
     document.querySelectorAll('a, button').forEach(element => {
+        // Don't add ripple to language switcher to prevent interference
+        if (element.classList.contains('lang-switcher')) return;
+
         element.addEventListener('click', function(e) {
             // Create ripple effect
             const ripple = document.createElement('span');
@@ -106,8 +132,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 600);
         });
     });
-
-    // Typing animation removed for better performance
 
     // Add stagger animation to feature cards
     const featureCards = document.querySelectorAll('#about .grid > div');

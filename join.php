@@ -51,7 +51,7 @@ $t = $BTH_T[$lang];
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 class="text-4xl md:text-6xl font-bold mb-6"><?php echo $t['join']; ?></h1>
             <p class="text-xl text-gray-300 max-w-2xl mx-auto">
-                Join the largest tech community in Bali. Connect, learn, and grow with us.
+                Join the fastest growing tech community in Bali. Connect, learn, and grow with us.
             </p>
         </div>
     </section>

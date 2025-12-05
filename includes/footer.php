@@ -11,12 +11,13 @@ $t = $BTH_T[$lang];
             <!-- Company Info -->
             <div class="space-y-4">
                 <div class="flex items-center">
-                    <img src="/assets/images/Bali Tech Hub White Tranparant Logo.webp" alt="Bali Tech Hub Logo"
-                        class="h-12 w-auto">
+                    <img src="<?php echo bth_root_url(); ?>/assets/images/Bali Tech Hub White Tranparant Logo.webp"
+                        alt="Bali Tech Hub Logo" class="h-12 w-auto">
                     <span class="ml-3 text-xl font-bold">Bali Tech Hub</span>
                 </div>
                 <p class="text-gray-300 text-sm leading-relaxed max-w-sm">
-                    The fastest growing technology community in Bali, connecting developers, designers, and tech enthusiasts.
+                    The fastest growing technology community in Bali, connecting developers, designers, and tech
+                    enthusiasts.
                 </p>
                 <!-- Social Icons -->
                 <div class="flex space-x-4">
@@ -56,27 +57,32 @@ $t = $BTH_T[$lang];
                 <h3 class="text-lg font-semibold mb-4">Quick Links</h3>
                 <ul class="space-y-3 text-sm">
                     <li>
-                        <a href="index.php" class="text-gray-300 hover:text-white transition-colors duration-300">
-                            Home
+                        <a href="<?php echo $base; ?>"
+                            class="text-gray-300 hover:text-white transition-colors duration-300">
+                            <?php echo $t['home']; ?>
                         </a>
                     </li>
                     <li>
-                        <a href="about.php" class="text-gray-300 hover:text-white transition-colors duration-300">
-                            About Us
+                        <a href="<?php echo get_page_url('about', $lang); ?>"
+                            class="text-gray-300 hover:text-white transition-colors duration-300">
+                            <?php echo $t['about']; ?>
                         </a>
                     </li>
                     <li>
-                        <a href="community.php" class="text-gray-300 hover:text-white transition-colors duration-300">
-                            Community
+                        <a href="<?php echo get_page_url('community', $lang); ?>"
+                            class="text-gray-300 hover:text-white transition-colors duration-300">
+                            <?php echo $t['community']; ?>
                         </a>
                     </li>
                     <li>
-                        <a href="partners.php" class="text-gray-300 hover:text-white transition-colors duration-300">
-                            Our Partners
+                        <a href="<?php echo get_page_url('partners', $lang); ?>"
+                            class="text-gray-300 hover:text-white transition-colors duration-300">
+                            <?php echo $t['partners']; ?>
                         </a>
                     </li>
                     <li>
-                        <a href="faq.php" class="text-gray-300 hover:text-white transition-colors duration-300">
+                        <a href="<?php echo get_page_url('faq', $lang); ?>"
+                            class="text-gray-300 hover:text-white transition-colors duration-300">
                             FAQ
                         </a>
                     </li>
@@ -146,16 +152,18 @@ $t = $BTH_T[$lang];
                 <h3 class="text-lg font-semibold mb-4">Supported By</h3>
                 <div class="space-y-2 text-sm">
                     <div class="text-gray-300 hover:text-white transition-colors duration-300">
-                        <a href="partners.php" class="hover:underline">Bali Alpha</a>
+                        <a href="<?php echo get_page_url('partners', $lang); ?>" class="hover:underline">Bali Alpha</a>
                     </div>
                     <div class="text-gray-300 hover:text-white transition-colors duration-300">
-                        <a href="partners.php" class="hover:underline">Bali Domains</a>
+                        <a href="<?php echo get_page_url('partners', $lang); ?>" class="hover:underline">Bali
+                            Domains</a>
                     </div>
                     <div class="text-gray-300 hover:text-white transition-colors duration-300">
-                        <a href="partners.php" class="hover:underline">Dewata Solutions</a>
+                        <a href="<?php echo get_page_url('partners', $lang); ?>" class="hover:underline">Dewata
+                            Solutions</a>
                     </div>
                     <div class="text-gray-300 hover:text-white transition-colors duration-300">
-                        <a href="partners.php" class="hover:underline">Dewata Tech</a>
+                        <a href="<?php echo get_page_url('partners', $lang); ?>" class="hover:underline">Dewata Tech</a>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 <?php
-// blog.php
+// id/blog.php
 
 // Pagination
 $page = isset($_GET['page']) ? (int) $_GET['page'] : 1;
@@ -75,13 +75,13 @@ if (!is_array($posts) || isset($posts['code'])) {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog - Bali Tech Hub</title>
-    <meta name="description" content="Latest news, insights, and updates from the Bali Tech Hub community.">
+    <meta name="description" content="Berita terbaru, wawasan, dan pembaruan dari komunitas Bali Tech Hub.">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -108,14 +108,14 @@ if (!is_array($posts) || isset($posts['code'])) {
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="../styles.css">
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
 </head>
 
 <body class="bg-custom-gray text-custom-black font-sans smooth-scroll">
-    <?php include __DIR__ . '/includes/navbar.php'; ?>
+    <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
     <!-- Header Section -->
     <section class="bg-custom-black text-white pt-32 pb-20 relative overflow-hidden">
@@ -125,9 +125,9 @@ if (!is_array($posts) || isset($posts['code'])) {
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
-            <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">Our Blog</h1>
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 fade-in">Blog Kami</h1>
             <p class="text-xl text-gray-300 max-w-2xl mx-auto fade-in">
-                Insights, updates, and stories from the Bali Tech Hub community.
+                Wawasan, pembaruan, dan cerita dari komunitas Bali Tech Hub.
             </p>
         </div>
     </section>
@@ -138,7 +138,7 @@ if (!is_array($posts) || isset($posts['code'])) {
             <form action="" method="GET" class="flex flex-col md:flex-row gap-4 justify-between items-center">
                 <!-- Search -->
                 <div class="relative w-full md:w-1/3">
-                    <input type="text" name="search" placeholder="Search articles..." value="<?php echo htmlspecialchars($search_query); ?>"
+                    <input type="text" name="search" placeholder="Cari artikel..." value="<?php echo htmlspecialchars($search_query); ?>"
                         class="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-black focus:border-transparent">
                     <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
                         <svg class="h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -151,8 +151,8 @@ if (!is_array($posts) || isset($posts['code'])) {
                 <div class="flex gap-4 w-full md:w-auto">
                     <select name="sort" onchange="this.form.submit()"
                         class="w-full md:w-auto px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-custom-black">
-                        <option value="date_desc" <?php echo $sort_option === 'date_desc' ? 'selected' : ''; ?>>Newest First</option>
-                        <option value="date_asc" <?php echo $sort_option === 'date_asc' ? 'selected' : ''; ?>>Oldest First</option>
+                        <option value="date_desc" <?php echo $sort_option === 'date_desc' ? 'selected' : ''; ?>>Terbaru</option>
+                        <option value="date_asc" <?php echo $sort_option === 'date_asc' ? 'selected' : ''; ?>>Terlama</option>
                         <option value="title_asc" <?php echo $sort_option === 'title_asc' ? 'selected' : ''; ?>>A-Z</option>
                         <option value="title_desc" <?php echo $sort_option === 'title_desc' ? 'selected' : ''; ?>>Z-A</option>
                     </select>
@@ -175,9 +175,9 @@ if (!is_array($posts) || isset($posts['code'])) {
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>
                     </div>
-                    <h3 class="text-2xl font-bold text-gray-700">No posts found.</h3>
-                    <p class="text-gray-500 mt-2">Try adjusting your search or filters.</p>
-                    <a href="/blog.php" class="inline-block mt-4 text-blue-600 hover:underline">Clear all filters</a>
+                    <h3 class="text-2xl font-bold text-gray-700">Tidak ada artikel ditemukan.</h3>
+                    <p class="text-gray-500 mt-2">Coba sesuaikan pencarian atau filter Anda.</p>
+                    <a href="/id/blog.php" class="inline-block mt-4 text-blue-600 hover:underline">Hapus semua filter</a>
                 </div>
             <?php else: ?>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -186,13 +186,13 @@ if (!is_array($posts) || isset($posts['code'])) {
                         $featured_img = isset($post['_embedded']['wp:featuredmedia'][0]['source_url'])
                             ? $post['_embedded']['wp:featuredmedia'][0]['source_url']
                             : 'https://via.placeholder.com/800x600?text=No+Image';
-                        $date = date('M d, Y', strtotime($post['date']));
+                        $date = date('d M Y', strtotime($post['date']));
                         $excerpt = strip_tags($post['excerpt']['rendered']);
                         $excerpt = strlen($excerpt) > 120 ? substr($excerpt, 0, 120) . '...' : $excerpt;
                         ?>
                         <article
                             class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover-lift flex flex-col h-full fade-in border border-gray-100">
-                            <a href="/single-post.php?slug=<?php echo $post['slug']; ?>" class="block overflow-hidden h-48 relative group">
+                            <a href="/id/single-post.php?slug=<?php echo $post['slug']; ?>" class="block overflow-hidden h-48 relative group">
                                 <img src="<?php echo $featured_img; ?>" alt="<?php echo $post['title']['rendered']; ?>"
                                     class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
                             </a>
@@ -204,16 +204,16 @@ if (!is_array($posts) || isset($posts['code'])) {
                                     <?php echo $date; ?>
                                 </div>
                                 <h2 class="text-xl font-bold mb-3 text-custom-black line-clamp-2">
-                                    <a href="/single-post.php?slug=<?php echo $post['slug']; ?>" class="hover:text-blue-600 transition-colors">
+                                    <a href="/id/single-post.php?slug=<?php echo $post['slug']; ?>" class="hover:text-blue-600 transition-colors">
                                         <?php echo $post['title']['rendered']; ?>
                                     </a>
                                 </h2>
                                 <p class="text-gray-600 mb-4 flex-1 line-clamp-3">
                                     <?php echo $excerpt; ?>
                                 </p>
-                                <a href="/single-post.php?slug=<?php echo $post['slug']; ?>"
+                                <a href="/id/single-post.php?slug=<?php echo $post['slug']; ?>"
                                     class="inline-flex items-center text-custom-black font-semibold hover:text-blue-600 transition-colors text-sm mt-auto">
-                                    Read More
+                                    Baca Selengkapnya
                                     <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                             d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -230,7 +230,7 @@ if (!is_array($posts) || isset($posts['code'])) {
                         <?php if ($page > 1): ?>
                             <a href="?page=<?php echo ($page - 1); ?>&search=<?php echo urlencode($search_query); ?>&sort=<?php echo $sort_option; ?>"
                                 class="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-custom-black hover:text-white transition-colors">
-                                Previous
+                                Sebelumnya
                             </a>
                         <?php endif; ?>
 
@@ -250,7 +250,7 @@ if (!is_array($posts) || isset($posts['code'])) {
                         <?php if ($page < $total_pages): ?>
                             <a href="?page=<?php echo ($page + 1); ?>&search=<?php echo urlencode($search_query); ?>&sort=<?php echo $sort_option; ?>"
                                 class="px-4 py-2 bg-white border border-gray-200 rounded-lg hover:bg-custom-black hover:text-white transition-colors">
-                                Next
+                                Selanjutnya
                             </a>
                         <?php endif; ?>
                     </div>
@@ -259,9 +259,9 @@ if (!is_array($posts) || isset($posts['code'])) {
         </div>
     </section>
 
-    <?php include __DIR__ . '/includes/footer.php'; ?>
+    <?php include __DIR__ . '/../includes/footer.php'; ?>
 
-    <script src="/script.js"></script>
+    <script src="../script.js"></script>
 </body>
 
 </html>

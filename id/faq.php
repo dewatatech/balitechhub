@@ -130,30 +130,35 @@
     <?php include __DIR__ . '/../includes/navbar.php'; ?>
 
     <!-- Hero Section -->
-    <section class="hero-gradient min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-        <!-- Background Pattern -->
-        <div class="absolute inset-0 opacity-5">
-            <div class="absolute top-0 left-0 w-full h-full" style="background-image: url('data:image/svg+xml;utf8,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'0.1\'%3E%3Ccircle cx=\'20\' cy=\'20\' r=\'1.5\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+    <section class="min-h-[60vh] flex items-center justify-center relative bg-gradient-to-br from-slate-900 via-custom-black to-slate-900 pt-16">
+        <!-- Subtle background elements -->
+        <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+            <div class="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.02"%3E%3Ccircle cx="30" cy="30" r="1"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
         </div>
 
-        <!-- Floating Elements -->
-        <div class="absolute top-20 left-10 w-20 h-20 bg-white/5 rounded-full animate-pulse float-animation"></div>
-        <div class="absolute top-40 right-20 w-16 h-16 bg-white/5 rounded-full animate-pulse delay-1000 float-animation"></div>
-        <div class="absolute bottom-20 left-1/4 w-12 h-12 bg-white/5 rounded-full animate-pulse delay-2000 float-animation"></div>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <!-- Logo with subtle animation -->
+            <div class="mb-8 fade-in-scale">
+                <img src="../assets/images/Bali Tech Hub White Tranparant Logo.webp" alt="Bali Tech Hub Logo" class="mx-auto h-16 w-auto opacity-90">
+            </div>
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-            <div class="fade-in">
-                <div class="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl mb-8 fade-in-scale">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                </div>
-                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight fade-in px-2">
+            <div class="space-y-6 mb-12">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight fade-in">
                     Pertanyaan yang <span class="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Sering Diajukan</span>
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto leading-relaxed fade-in px-4">
-                    Temukan jawaban untuk pertanyaan umum tentang Bali Tech Hub dan komunitas kami
-                </p>
+                <div class="max-w-3xl mx-auto fade-in" style="animation-delay: 0.2s;">
+                    <p class="text-lg sm:text-xl md:text-2xl text-gray-300 leading-relaxed">
+                        Temukan jawaban untuk pertanyaan umum tentang Bali Tech Hub dan komunitas kami
+                    </p>
+                    <div class="mt-4 flex items-center justify-center space-x-2">
+                        <div class="h-px w-16 bg-gray-600"></div>
+                        <span class="text-gray-500 text-sm uppercase tracking-wider">FAQ</span>
+                        <div class="h-px w-16 bg-gray-600"></div>
+                    </div>
+                </div>
+            </div>
 
                 <!-- Search -->
                 <div class="max-w-2xl mx-auto fade-in">
@@ -182,9 +187,6 @@
                 <button onclick="filterFAQ('membership')" class="category-btn px-6 py-3 bg-custom-gray text-custom-black rounded-full font-medium hover:bg-gray-200 transition-colors">
                     Keanggotaan
                 </button>
-                <button onclick="filterFAQ('events')" class="category-btn px-6 py-3 bg-custom-gray text-custom-black rounded-full font-medium hover:bg-gray-200 transition-colors">
-                    Event
-                </button>
                 <button onclick="filterFAQ('partnership')" class="category-btn px-6 py-3 bg-custom-gray text-custom-black rounded-full font-medium hover:bg-gray-200 transition-colors">
                     Kemitraan
                 </button>
@@ -204,7 +206,7 @@
                     </div>
                     <div class="faq-content bg-white p-6 rounded-b-xl">
                         <p class="text-gray-600 leading-relaxed">
-                            Bali Tech Hub adalah komunitas teknologi yang berkembang pesat di Bali, mengumpulkan developer, desainer, entrepreneur, dan penggemar teknologi untuk berkolaborasi, belajar, dan tumbuh bersama. Kami mengorganisir event, workshop, dan menyediakan kesempatan networking untuk komunitas teknologi di Bali.
+                            Bali Tech Hub adalah komunitas teknologi yang berkembang pesat di Bali, mengumpulkan developer, desainer, entrepreneur, dan penggemar teknologi untuk berkolaborasi, belajar, dan tumbuh bersama. Kami menyediakan kesempatan networking dan berbagi pengetahuan untuk komunitas teknologi di Bali.
                         </p>
                     </div>
                 </div>
@@ -243,9 +245,7 @@
                             <br>
                             • <strong>WhatsApp:</strong> Bergabung dengan komunitas WhatsApp kami untuk update cepat
                             <br>
-                            • <strong>Event:</strong> Hadiri meetup dan workshop kami
-                            <br>
-                            • <strong>Social Media:</strong> Ikuti kami di Instagram, Twitter, dan LinkedIn
+                            • <strong>Media Sosial:</strong> Ikuti kami di Instagram, Twitter, dan LinkedIn
                         </p>
                     </div>
                 </div>
@@ -261,7 +261,7 @@
                     </div>
                     <div class="faq-content bg-white p-6 rounded-b-xl">
                         <p class="text-gray-600 leading-relaxed">
-                            Tidak, bergabung dengan Bali Tech Hub sepenuhnya gratis! Kami percaya pada membuat pendidikan dan networking teknologi dapat diakses oleh semua orang. Beberapa workshop atau event khusus mungkin ada biaya kecil untuk menutup biaya, tetapi sebagian besar aktivitas kami gratis untuk semua anggota.
+                            Tidak, bergabung dengan Bali Tech Hub sepenuhnya gratis! Kami percaya pada membuat pendidikan dan networking teknologi dapat diakses oleh semua orang. Semua aktivitas komunitas kami gratis untuk semua anggota.
                         </p>
                     </div>
                 </div>
@@ -281,7 +281,7 @@
                             <br><br>
                             • Networking dengan profesional teknologi di Bali
                             <br>
-                            • Kesempatan belajar melalui workshop dan talk
+                            • Kesempatan belajar melalui diskusi dan berbagi pengetahuan
                             <br>
                             • Akses ke lowongan kerja dan magang
                             <br>
@@ -294,51 +294,7 @@
                     </div>
                 </div>
 
-                <!-- Events Questions -->
-                <div class="faq-item" data-category="events">
-                    <div onclick="toggleFAQ(this)" class="bg-custom-gray p-6 rounded-xl cursor-pointer hover:bg-gray-100 transition-colors">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-lg font-semibold">Jenis event apa saja yang Anda selenggarakan?</h3>
-                            <svg class="w-5 h-5 faq-icon text-custom-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-content bg-white p-6 rounded-b-xl">
-                        <p class="text-gray-600 leading-relaxed">
-                            Kami mengorganisir berbagai jenis event termasuk:
-                            <br><br>
-                            • Meetup dan networking teknologi
-                            <br>
-                            • Workshop dan sesi berbagi keterampilan
-                            <br>
-                            • Hackathon dan kompetisi coding
-                            <br>
-                            • Tech talk dari pakar industri
-                            <br>
-                            • Event startup pitch
-                            <br>
-                            • Kelompok belajar dan sesi coding
-                        </p>
-                    </div>
-                </div>
-
-                <div class="faq-item" data-category="events">
-                    <div onclick="toggleFAQ(this)" class="bg-custom-gray p-6 rounded-xl cursor-pointer hover:bg-gray-100 transition-colors">
-                        <div class="flex items-center justify-between">
-                            <h3 class="text-lg font-semibold">Seberapa sering Anda mengadakan event?</h3>
-                            <svg class="w-5 h-5 faq-icon text-custom-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                            </svg>
-                        </div>
-                    </div>
-                    <div class="faq-content bg-white p-6 rounded-b-xl">
-                        <p class="text-gray-600 leading-relaxed">
-                            Kami mengadakan event secara teratur sepanjang bulan. Kami memiliki meetup informal mingguan, workshop bulanan, dan event khusus setiap kuartal. Semua event diumumkan melalui server Discord kami, komunitas WhatsApp, dan saluran media sosial.
-                        </p>
-                    </div>
-                </div>
-
+  
                 <!-- Partnership Questions -->
                 <div class="faq-item" data-category="partnership">
                     <div onclick="toggleFAQ(this)" class="bg-custom-gray p-6 rounded-xl cursor-pointer hover:bg-gray-100 transition-colors">
@@ -351,7 +307,7 @@
                     </div>
                     <div class="faq-content bg-white p-6 rounded-b-xl">
                         <p class="text-gray-600 leading-relaxed">
-                            Kami menawarkan berbagai peluang kemitraan termasuk sponsorship event, kemitraan venue, program mentorship, dan rekrutmen talenta. Anda dapat mempelajari lebih lanjut tentang opsi kemitraan kami di halaman Mitra atau hubungi kami langsung di contact@balitechhub.com untuk mendiskusikan peluang kemitraan yang disesuaikan.
+                            Kami menawarkan berbagai peluang kemitraan termasuk sponsorship komunitas, kemitraan venue, program mentorship, dan rekrutmen talenta. Anda dapat mempelajari lebih lanjut tentang opsi kemitraan kami di halaman Mitra atau hubungi kami langsung di contact@balitechhub.com untuk mendiskusikan peluang kemitraan yang disesuaikan.
                         </p>
                     </div>
                 </div>
@@ -386,11 +342,11 @@
                         <p class="text-gray-600 leading-relaxed">
                             Ada banyak cara untuk berkontribusi:
                             <br><br>
-                            • Bagikan pengetahuan Anda dengan memberikan talk atau workshop
+                            • Bagikan pengetahuan Anda melalui diskusi dan mentorship
                             <br>
                             • Mentor para pendatang baru di komunitas
                             <br>
-                            • Bantu mengorganisir event
+                            • Bantu mengorganisir aktivitas komunitas
                             <br>
                             • Bagikan lowongan kerja
                             <br>

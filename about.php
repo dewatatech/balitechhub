@@ -215,7 +215,7 @@
                         <div class="bg-gradient-to-br from-orange-500 to-red-600 p-6 rounded-xl hover-lift shadow-lg">
                             <div class="w-12 h-12 bg-white/20 backdrop-blur rounded-lg flex items-center justify-center mb-4">
                                 <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A6.978 6.978 0 0118 16.5c-2.762 0-5-2.238-5-5s2.238-5 5-5 5 2.238 5 5c0 1.5-.657 2.839-1.7 3.745M9 13.255A6.978 6.978 0 016 16.5c-2.762 0-5-2.238-5-5s2.238-5 5-5 5 2.238 5 5c0 1.5-.657 2.839-1.7 3.745"/>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"/>
                                 </svg>
                             </div>
                             <h3 class="text-xl font-semibold mb-3 text-white">Collaboration</h3>

@@ -15,7 +15,7 @@
         <lastmod>2025-11-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
-        <xhtml:link rel="alternate" hreflang="id" href="https://balitechhub.com/about-id.php" />
+        <xhtml:link rel="alternate" hreflang="id" href="https://balitechhub.com/id/about.php" />
         <xhtml:link rel="alternate" hreflang="en" href="https://balitechhub.com/about.php" />
     </url>
     
@@ -29,12 +29,12 @@
         <xhtml:link rel="alternate" hreflang="id" href="https://balitechhub.com/id/" />
     </url>
     <url>
-        <loc>https://balitechhub.com/id/about-id.php</loc>
+        <loc>https://balitechhub.com/id/about.php</loc>
         <lastmod>2025-11-01</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
         <xhtml:link rel="alternate" hreflang="en" href="https://balitechhub.com/about.php" />
-        <xhtml:link rel="alternate" hreflang="id" href="https://balitechhub.com/id/about-id.php" />
+        <xhtml:link rel="alternate" hreflang="id" href="https://balitechhub.com/id/about.php" />
     </url>
     
     <!-- 404 Pages -->
@@ -46,7 +46,7 @@
     </url>
     
     <url>
-        <loc>https://balitechhub.com/404-id.php</loc>
+        <loc>https://balitechhub.com/id/404.php</loc>
         <lastmod>2025-11-01</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.1</priority>

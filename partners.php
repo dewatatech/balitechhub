@@ -163,7 +163,7 @@
                     <a href="contact.php" class="inline-flex items-center bg-white text-custom-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover-lift shadow-lg">
                         Become a Partner
                         <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
                         </svg>
                     </a>
                 </div>
@@ -245,7 +245,7 @@
             <div class="fade-in">
                 <div class="inline-flex items-center justify-center w-20 h-20 bg-white/10 backdrop-blur-sm rounded-2xl mb-8 fade-in-scale">
                     <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A6.978 6.978 0 0118 16.5c-2.762 0-5-2.238-5-5s2.238-5 5-5 5 2.238 5 5c0 1.5-.657 2.839-1.7 3.745M9 13.255A6.978 6.978 0 016 16.5c-2.762 0-5-2.238-5-5s2.238-5 5-5 5 2.238 5 5c0 1.5-.657 2.839-1.7 3.745"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
                     </svg>
                 </div>
                 <h2 class="text-4xl md:text-6xl font-bold mb-6">
@@ -258,13 +258,13 @@
                 <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
                     <a href="contact.php" class="bg-white text-custom-black px-8 py-4 rounded-xl font-semibold hover:bg-gray-100 transition-all duration-300 hover-lift shadow-lg inline-flex items-center">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A6.978 6.978 0 0118 16.5c-2.762 0-5-2.238-5-5s2.238-5 5-5 5 2.238 5 5c0 1.5-.657 2.839-1.7 3.745M9 13.255A6.978 6.978 0 016 16.5c-2.762 0-5-2.238-5-5s2.238-5 5-5 5 2.238 5 5c0 1.5-.657 2.839-1.7 3.745"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z"/>
                         </svg>
                         Become a Partner
                     </a>
                     <a href="mailto:partners@balitechhub.com" class="border-2 border-white text-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-custom-black transition-all duration-300 hover-lift inline-flex items-center">
                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
                         </svg>
                         Email Us
                     </a>

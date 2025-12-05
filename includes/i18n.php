@@ -1,7 +1,22 @@
 <?php
+function bth_root_url(): string
+{
+    $root_path = str_replace('\\', '/', dirname(__DIR__));
+    $doc_root = str_replace('\\', '/', $_SERVER['DOCUMENT_ROOT']);
+    $url = str_replace($doc_root, '', $root_path);
+    return rtrim($url, '/');
+}
+
 function bth_current_lang(): string
 {
     $uri = $_SERVER['REQUEST_URI'] ?? '/';
+    $root = bth_root_url();
+
+    // Remove root path from URI to get relative path
+    if ($root && str_starts_with($uri, $root)) {
+        $uri = substr($uri, strlen($root));
+    }
+
     $script = $_SERVER['PHP_SELF'] ?? '';
     if (preg_match('#^/id($|/)#', $uri))
         return 'id';
@@ -12,7 +27,8 @@ function bth_current_lang(): string
 
 function bth_base_path(string $lang): string
 {
-    return $lang === 'id' ? '/id/' : '/';
+    $root = bth_root_url();
+    return $root . ($lang === 'id' ? '/id/' : '/');
 }
 
 $BTH_T = [

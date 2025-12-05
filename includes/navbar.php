@@ -5,14 +5,41 @@ $base = bth_base_path($lang);
 global $BTH_T;
 $t = $BTH_T[$lang];
 
-// Generate page URLs based on current language
+// Calculate Language Switch URLs dynamically based on current request
+$request_uri = $_SERVER['REQUEST_URI'];
+$root = bth_root_url();
+$uri_path = parse_url($request_uri, PHP_URL_PATH);
+$query = parse_url($request_uri, PHP_URL_QUERY);
+$relative_path = substr($uri_path, strlen($root));
+
+if ($lang === 'id') {
+    // Current is ID, switch to EN
+    // Remove /id prefix from path
+    $new_path = preg_replace('#^/id#', '', $relative_path);
+    if (empty($new_path)) $new_path = '/';
+    $url_en = $root . $new_path . ($query ? '?' . $query : '');
+    $url_id = $request_uri; // Current
+} else {
+    // Current is EN, switch to ID
+    // Add /id prefix. Handle root path correctly.
+    if ($relative_path === '/') {
+        $new_path = '/id/';
+    } else {
+        $new_path = '/id' . $relative_path;
+    }
+    $url_id = $root . $new_path . ($query ? '?' . $query : '');
+    $url_en = $request_uri; // Current
+}
+
+// Helper for menu links
 if (!function_exists('get_page_url')) {
     function get_page_url($page, $lang)
     {
+        $root = bth_root_url();
         if ($lang === 'id') {
-            return '/id/' . $page . '.php';
+            return $root . '/id/' . $page . '.php';
         }
-        return '/' . $page . '.php';
+        return $root . '/' . $page . '.php';
     }
 }
 ?>
@@ -22,8 +49,8 @@ if (!function_exists('get_page_url')) {
             <!-- Logo -->
             <div class="flex items-center hover-scale">
                 <a href="<?php echo $base; ?>" class="flex items-center">
-                    <img src="/assets/images/Bali Tech Hub Black Tranparant Logo.webp" alt="Bali Tech Hub Logo"
-                        class="h-10 w-auto">
+                    <img src="<?php echo bth_root_url(); ?>/assets/images/Bali Tech Hub Black Tranparant Logo.webp"
+                        alt="Bali Tech Hub Logo" class="h-10 w-auto">
                     <span class="ml-3 text-xl font-semibold text-custom-black">Bali Tech Hub</span>
                 </a>
             </div>
@@ -55,7 +82,8 @@ if (!function_exists('get_page_url')) {
                                 <a href="<?php echo get_page_url('partners', $lang); ?>"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                     role="menuitem"><?php echo $t['partners']; ?></a>
-                                <a href="/blog" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
+                                <a href="<?php echo get_page_url('blog', $lang); ?>"
+                                    class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                     role="menuitem"><?php echo $t['blog']; ?></a>
                                 <a href="<?php echo get_page_url('faq', $lang); ?>"
                                     class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
@@ -67,15 +95,15 @@ if (!function_exists('get_page_url')) {
                     <a href="<?php echo get_page_url('contact', $lang); ?>"
                         class="text-custom-black hover:text-gray-600 px-3 py-2 text-sm font-medium transition-colors duration-300"><?php echo $t['contact']; ?></a>
                     <a href="<?php echo get_page_url('join', $lang); ?>"
-                        class="bg-custom-black text-white hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-lg ml-2"><?php echo $t['join']; ?></a>
+                        class="bg-custom-black text-white hover:bg-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300 hover:shadow-lg"><?php echo $t['join']; ?></a>
 
                     <!-- Language Switcher -->
                     <div class="flex items-center ml-4 pl-4 border-l border-gray-300">
-                        <a href="/"
-                            class="text-gray-600 hover:text-custom-black px-2 py-1 text-sm font-medium transition-colors duration-300 <?php echo $lang === 'en' ? 'text-custom-black font-semibold' : ''; ?>">EN</a>
+                        <a href="<?php echo $url_en; ?>"
+                            class="lang-switcher text-gray-600 hover:text-custom-black px-2 py-1 text-sm font-medium transition-colors duration-300 <?php echo $lang === 'en' ? 'text-custom-black font-semibold' : ''; ?>">EN</a>
                         <span class="mx-1 text-gray-400">|</span>
-                        <a href="/id/"
-                            class="text-gray-600 hover:text-custom-black px-2 py-1 text-sm font-medium transition-colors duration-300 <?php echo $lang === 'id' ? 'text-custom-black font-semibold' : ''; ?>">ID</a>
+                        <a href="<?php echo $url_id; ?>"
+                            class="lang-switcher text-gray-600 hover:text-custom-black px-2 py-1 text-sm font-medium transition-colors duration-300 <?php echo $lang === 'id' ? 'text-custom-black font-semibold' : ''; ?>">ID</a>
                     </div>
                 </div>
             </div>
@@ -104,7 +132,7 @@ if (!function_exists('get_page_url')) {
                     class="text-gray-600 hover:text-custom-black block px-3 py-2 text-base font-medium"><?php echo $t['community']; ?></a>
                 <a href="<?php echo get_page_url('partners', $lang); ?>"
                     class="text-gray-600 hover:text-custom-black block px-3 py-2 text-base font-medium"><?php echo $t['partners']; ?></a>
-                <a href="/blog"
+                <a href="<?php echo get_page_url('blog', $lang); ?>"
                     class="text-gray-600 hover:text-custom-black block px-3 py-2 text-base font-medium"><?php echo $t['blog']; ?></a>
                 <a href="<?php echo get_page_url('faq', $lang); ?>"
                     class="text-gray-600 hover:text-custom-black block px-3 py-2 text-base font-medium">FAQ</a>
@@ -116,11 +144,11 @@ if (!function_exists('get_page_url')) {
 
             <!-- Mobile Language Switcher -->
             <div class="flex items-center justify-center px-3 py-2 border-t border-gray-200 mt-2 pt-2">
-                <a href="/"
-                    class="text-gray-600 hover:text-custom-black px-3 py-1 text-sm font-medium <?php echo $lang === 'en' ? 'text-custom-black font-semibold' : ''; ?>">EN</a>
+                <a href="<?php echo $url_en; ?>"
+                    class="lang-switcher text-gray-600 hover:text-custom-black px-3 py-1 text-sm font-medium <?php echo $lang === 'en' ? 'text-custom-black font-semibold' : ''; ?>">EN</a>
                 <span class="mx-2 text-gray-400">|</span>
-                <a href="/id/"
-                    class="text-gray-600 hover:text-custom-black px-3 py-1 text-sm font-medium <?php echo $lang === 'id' ? 'text-custom-black font-semibold' : ''; ?>">ID</a>
+                <a href="<?php echo $url_id; ?>"
+                    class="lang-switcher text-gray-600 hover:text-custom-black px-3 py-1 text-sm font-medium <?php echo $lang === 'id' ? 'text-custom-black font-semibold' : ''; ?>">ID</a>
             </div>
         </div>
     </div>
@@ -136,7 +164,7 @@ if (!function_exists('get_page_url')) {
             "@type": "ListItem",
             "position": 1,
             "name": "<?php echo $t['home']; ?>",
-            "item": "https://balitechhub.com<?php echo $lang === 'id' ? '/id/' : '/'; ?>"
+            "item": "https://balitechhub.com<?php echo bth_base_path($lang); ?>"
         },
         {
             "@type": "ListItem",
@@ -160,7 +188,7 @@ if (!function_exists('get_page_url')) {
             "@type": "ListItem",
             "position": 5,
             "name": "<?php echo $t['blog']; ?>",
-            "item": "https://balitechhub.com/blog"
+            "item": "https://balitechhub.com/<?php echo get_page_url('blog', $lang); ?>"
         },
         {
             "@type": "ListItem",

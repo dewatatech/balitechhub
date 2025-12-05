@@ -435,11 +435,11 @@
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 relative z-10 px-4">
                     <div class="text-center">
-                        <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">18+</div>
+                        <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">50+</div>
                         <div class="text-gray-300 text-sm sm:text-base">Anggota</div>
                     </div>
                     <div class="text-center">
-                        <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">3+</div>
+                        <div class="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">5+</div>
                         <div class="text-gray-300 text-sm sm:text-base">Partner</div>
                     </div>
                 </div>
@@ -488,12 +488,12 @@
                 <!-- Community Stats -->
                 <div class="flex justify-center items-center space-x-8 text-gray-600 fade-in">
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-custom-black">18+</div>
+                        <div class="text-3xl font-bold text-custom-black">50+</div>
                         <div class="text-sm">Anggota Aktif</div>
                     </div>
                     <div class="w-px h-8 bg-gray-300"></div>
                     <div class="text-center">
-                        <div class="text-3xl font-bold text-custom-black">3+</div>
+                        <div class="text-3xl font-bold text-custom-black">5+</div>
                         <div class="text-sm">Partner</div>
                     </div>
                     <div class="w-px h-8 bg-gray-300"></div>

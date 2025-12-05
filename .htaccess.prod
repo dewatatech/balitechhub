@@ -54,19 +54,19 @@ RewriteEngine On
 RewriteRule ^about/?$ /about.php [L]
 
 # Handle Indonesian main page
-RewriteRule ^id/?$ /index-id.php [L]
+RewriteRule ^id/?$ /id/index.php [L]
 
 # Handle Indonesian 404 page
-RewriteRule ^id/404/?$ /404-id.php [L]
+RewriteRule ^id/404/?$ /id/404.php [L]
 
 # Handle Indonesian About page
-RewriteRule ^id/about/?$ /about-id.php [L]
+RewriteRule ^id/about/?$ /id/about.php [L]
 
 # Smart 404 handling - if URL starts with /id/ but file doesn't exist, show Indonesian 404
 RewriteCond %{REQUEST_URI} ^/id/
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^id/(.*)$ /404-id.php [L]
+RewriteRule ^id/(.*)$ /id/404.php [L]
 
 # Default 404 for all other non-existent files
 RewriteCond %{REQUEST_FILENAME} !-f
